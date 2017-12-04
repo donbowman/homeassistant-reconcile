@@ -26,10 +26,12 @@ This script will create an 'untracked.yaml' file
 You probably want to add:
 
       default_view:
-        view: no
+        name: main
+        view: yes
           entities:
+           [short list of entities you want on main]
 
-to your group.yaml, this will delete the default view
+to your group.yaml, this will override the default view entity list
 
 When you run it, you will see 3 lines:
     $ python3 ./reconcile.py
