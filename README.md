@@ -16,13 +16,20 @@ run this the first time) should be changed to:
 
 This script will create an 'untracked.yaml' file
 
-entities:
-- entity1
- ...
-- entityN
-name: untracked
-view: 'yes'
+    entities:
+    - entity1
+     ...
+    - entityN
+    name: untracked
+    view: 'yes'
 
+You probably want to add:
+
+      default_view:
+        view: no
+          entities:
+
+to your group.yaml, this will delete the default view
 
 When you run it, you will see 3 lines:
     $ python3 ./reconcile.py
